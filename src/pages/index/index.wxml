@@ -1,0 +1,36 @@
+<!--index.wxml-->
+<view class="container nav">
+    <view class="back" bindtap="back">
+        返回
+    </view>
+    <view class="search" hover-class="none" hover-stop-propagation="false">
+        <input placeholder="点击搜索" placeholder-class="search-placeholder" confirm-type="search" auto-focus />
+        <icon size="10rpx" color="#ccc">搜索</icon>
+    </view>
+    <view class="" hover-class="none" hover-stop-propagation="false">
+        xx商城
+    </view>
+</view>
+<swiper class="swiper container" indicator-dots autoplay interval="5000" circular>
+    <block wx:for="{{displayImgs}}" wx:for-item="item">
+        <swiper-item>
+            <image lazy-load data-index="{{index}}" src="{{item.src}}" class="view-item" bindtap="showDisplayDetail"></image>
+        </swiper-item>
+    </block>
+</swiper>
+<scroll-view>
+    <view class="container good-container">
+        <block wx:for="{{topGoods}}">
+            <view class="good-wrap" hover-class="good-wrap-hover" bindtap="showDetail" data-type="topGoods" data-index="{{index}}">
+                <image class="good-img" src="{{item.src}}" lazy-load> </image>
+                <view class="desc-wrap">
+                    <text class="good-title"> {{item.title}} </text>
+                    <view class="">
+                        <text class="good-price" selectable>￥{{item.price}}</text>
+                        <text class="good-place">{{item.place}}</text>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </view>
+</scroll-view>
