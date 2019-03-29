@@ -21,7 +21,7 @@
 <scroll-view>
     <view class="container good-container">
         <block wx:for="{{topGoods}}">
-            <view class="good-wrap" hover-class="good-wrap-hover" bindtap="showDetail" data-type="topGoods" data-index="{{index}}">
+            <view class="good-wrap" hover-class="good-wrap-hover"  data-type="topGoods" data-index="{{index}}" bindtap="showDetail" >
                 <image class="good-img" src="{{item.src}}" lazy-load> </image>
                 <view class="desc-wrap">
                     <text class="good-title"> {{item.title}} </text>

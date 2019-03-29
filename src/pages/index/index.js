@@ -12,7 +12,13 @@ Page({
         canIUse: wx.canIUse('button.open-type.getUserInfo')
     },
     showDetail: function(e) {
-        let dataset = e.target.dataset;
+        let dataset = e.currentTarget.dataset,
+            index = dataset.index,
+            type = dataset.type;
+
+        wx.navigateTo({
+            url: `../detail/detail?index=${index}&type=${type}`
+        });
     },
     onShow: function() {
         wx.request({
