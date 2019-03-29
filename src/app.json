@@ -2,6 +2,7 @@
     "pages": [
         "pages/index/index",
         "pages/cart/cart",
+        "pages/detail/detail",
         "pages/mine/mine"
     ],
     "window": {
