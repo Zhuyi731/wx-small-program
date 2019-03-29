@@ -1,6 +1,51 @@
-<!--logs.wxml-->
-<view class="container log-list">
-  <block wx:for="{{logs}}" wx:for-item="log">
-    <text class="log-item">{{index + 1}}. {{log}}</text>
-  </block>
+<!--cart.wxml-->
+<view class="container cart-container">
+    <block wx:if="{{carts.length==0}}">
+        <view class="" hover-class="none" hover-stop-propagation="false">
+            <text>
+                购物车里空空如也
+            </text>
+        </view>
+    </block>
+    <block wx:elseif="{{carts.length>0}}">
+        <view class="page-container" hover-class="none" hover-stop-propagation="false">
+            <scroll-view class="scroll-container" scroll-y hover-class="none" hover-stop-propagation="false">
+                <block wx:for="{{carts}}">
+                    <view class="cart-block" hover-class="none" hover-stop-propagation="false">
+                        <view class="cart-img-wrap" hover-class="none" hover-stop-propagation="false">
+                            <image src="{{item.src}}" alt="" />
+                        </view>
+                        <view class="cart-detail-wrap" hover-class="none" hover-stop-propagation="false">
+                            <view class="cart-description-wrap" hover-class="none" hover-stop-propagation="false">
+                                <!-- <text class="cart-description" hover-class="none" hover-stop-propagation="false"> -->
+                                {{item.title}}
+                                <!-- </text> -->
+                            </view>
+                            <view class="cart-count-wrap" hover-class="none" hover-stop-propagation="false">
+                                <view class="cart-price" hover-class="none" hover-stop-propagation="false">
+                                    ￥{{item.price}}
+                                </view>
+                                <view class="cart-count" hover-class="none" hover-stop-propagation="false">
+                                    <button>-</button>
+                                    <view>{{item.count}}</view>
+                                    <button>+</button>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </block>
+            </scroll-view>
+        </view>
+
+        <view class="footer" catchtouchmove="doNothing">
+            <view class="total-price-wrap" hover-class="none" hover-stop-propagation="false">
+                总价:￥<text class="total-price">{{totalPrice}}</text>
+            </view>
+            <button class="settle">
+                去结算
+            </button>
+        </view>
+
+    </block>
+
 </view>
