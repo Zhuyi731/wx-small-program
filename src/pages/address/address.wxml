@@ -1,0 +1,16 @@
+<view class="container address-container" hover-class="none" hover-stop-propagation="false">
+    <block wx:for="{{addressList}}">
+        <view class="address-wrapper" hover-class="none" hover-stop-propagation="false">
+            <view class="name" hover-class="none" hover-stop-propagation="false">
+                {{item.name}}
+            </view>
+            <view class="phone" hover-class="none" hover-stop-propagation="false">
+                {{item.phone}}
+            </view>
+            <view class="address" hover-class="none" hover-stop-propagation="false">
+                {{item.address}}
+            </view>
+        </view>
+    </block>
+
+</view>

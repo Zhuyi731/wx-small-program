@@ -1,0 +1,30 @@
+<view class="container mine-container">
+    <view class="head-logo-wrapper" hover-class="none" hover-stop-propagation="false">
+        <image class="user-img" src="{{userInfo.avatarUrl}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+
+        </image>
+        <text class="user-nickname" selectable="false" space="false" decode="false">
+            {{userInfo.nickname}}xxxx
+        </text>
+    </view>
+    <view class="my-setting-wrapper" hover-class="none" hover-stop-propagation="false">
+        <view class="my-order" bindtap="navigateTo" data-type="order" hover-class="none" hover-stop-propagation="false">
+            <view class="block-wrapper" hover-class="none" hover-stop-propagation="false">
+                <image class="block-icon" src="/images/dingdan.png"></image>
+                <view class="block-title" hover-class="none" hover-stop-propagation="false">
+                    我的订单
+                </view>
+                <view class="right-arrow" hover-class="none" hover-stop-propagation="false"></view>
+            </view>
+        </view>
+        <view class="my-address" bindtap="navigateTo" data-type="address" hover-class="none" hover-stop-propagation="false">
+            <view class="block-wrapper" hover-class="none" hover-stop-propagation="false">
+                <image class="block-icon" src="/images/ding.png"></image>
+                <view class="block-title" hover-class="none" hover-stop-propagation="false">
+                    地址管理
+                </view>
+                <view class="right-arrow" hover-class="none" hover-stop-propagation="false"></view>
+            </view>
+        </view>
+    </view>
+</view>

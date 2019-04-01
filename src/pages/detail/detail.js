@@ -1,5 +1,6 @@
 //获取应用实例
 var app = getApp()
+const util = require("../../utils/util");
 Page({
     data: {
         good: {},
@@ -39,10 +40,10 @@ Page({
     },
     addToCart: function() {
         let carts = wx.getStorageSync("cart") || [];
-        wx.setStorageSync("cart", carts.shift({
-            options: this.data.options,
-            count: this.data.buyCount
-        }));
+        let cart = util.cloneDeep(this.data.good);
+        cart.count = this.data.buyCount;
+        carts.push(cart);
+        wx.setStorageSync("cart", carts);
 
         wx.switchTab({
             url: "../cart/cart"

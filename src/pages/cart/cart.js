@@ -1,64 +1,56 @@
 const app = getApp();
-
+const util = require("../../utils/util");
 Page({
     data: {
-        carts: [{
-            "src": "/images/top/top1.jpg",
-            "title": "Nike Nike Air Mag到未来Air Mag",
-            "price": "79999",
-            "place": "北京",
-            "description": "还记得儿时我们都很喜欢走起路来又发光又有声音的鞋吗？而现在，耐克为我们带来了这样经典的回忆。并且，不只有回忆，更有逼格满满的黑科技。",
-            count: 1
-        }, {
-            "src": "/images/top/top1.jpg",
-            "title": "Nike Nike Air Mag到未来Air Mag",
-            "price": "79999",
-            "place": "北京",
-            "description": "还记得儿时我们都很喜欢走起路来又发光又有声音的鞋吗？而现在，耐克为我们带来了这样经典的回忆。并且，不只有回忆，更有逼格满满的黑科技。",
-            count: 1
-        }, {
-            "src": "/images/top/top1.jpg",
-            "title": "Nike Nike Air Mag到未来Air Mag",
-            "price": "79999",
-            "place": "北京",
-            "description": "还记得儿时我们都很喜欢走起路来又发光又有声音的鞋吗？而现在，耐克为我们带来了这样经典的回忆。并且，不只有回忆，更有逼格满满的黑科技。",
-            count: 1
-        }, {
-            "src": "/images/top/top1.jpg",
-            "title": "Nike Nike Air Mag到未来Air Mag",
-            "price": "79999",
-            "place": "北京",
-            "description": "还记得儿时我们都很喜欢走起路来又发光又有声音的鞋吗？而现在，耐克为我们带来了这样经典的回忆。并且，不只有回忆，更有逼格满满的黑科技。",
-            count: 1
-        }, {
-            "src": "/images/top/top1.jpg",
-            "title": "Nike Nike Air Mag到未来Air Mag",
-            "price": "79999",
-            "place": "北京",
-            "description": "还记得儿时我们都很喜欢走起路来又发光又有声音的鞋吗？而现在，耐克为我们带来了这样经典的回忆。并且，不只有回忆，更有逼格满满的黑科技。",
-            count: 1
-        }, {
-            "src": "/images/top/top1.jpg",
-            "title": "Nike Nike Air Mag到未来Air Mag",
-            "price": "79999",
-            "place": "北京",
-            "description": "还记得儿时我们都很喜欢走起路来又发光又有声音的鞋吗？而现在，耐克为我们带来了这样经典的回忆。并且，不只有回忆，更有逼格满满的黑科技。",
-            count: 1
-        }],
+        carts: [],
         totalPrice: 0
     },
-    onLoad: function() {
-        let carts = wx.getStorageSync("cart") || [];
+    onShow: function() {
+        let carts = wx.getStorageSync("cart") || [],
+            totalPrice = this.getTotalPrice(carts);
 
-        wx.request({
-            url: app.url("/data/goods.json"),
-            success: res => {
-              
-            }
+        this.setData({
+            carts,
+            totalPrice
         });
-
     },
-    nothing:function(e){
-      debugger;
+    decline: function(e) {
+        let index = e.target.dataset.index,
+            carts = this.data.carts,
+            cart = carts[index];
+
+        if (cart.count == 1) {
+            carts.splice(index, 1);
+        } else {
+            carts[index].count--;
+        }
+
+        wx.setStorageSync("cart", carts);
+
+        this.setData({
+            carts,
+            totalPrice: this.data.totalPrice - cart.price
+        })
+    },
+    add: function(e) {
+        let index = e.target.dataset.index,
+            carts = this.data.carts,
+            cart = carts[index];
+
+        carts[index].count++;
+
+        wx.setStorageSync("cart", carts);
+
+        this.setData({
+            carts,
+            totalPrice: this.data.totalPrice + cart.price
+        })
+    },
+    getTotalPrice: function(carts) {
+        let totalPrice = 0;
+        carts.forEach(el => {
+            totalPrice += el.price * el.count;
+        });
+        return totalPrice;
     }
 })

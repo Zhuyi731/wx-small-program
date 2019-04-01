@@ -13,8 +13,8 @@ page {
 }
 
 .page-container {
-    flex:1;
-    height: 1100rpx;
+    flex: 1;
+    margin-bottom: 52px;
 }
 
 .scroll-container {
@@ -117,7 +117,7 @@ page {
 }
 
 .footer {
-    display: fixed;
+    position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
@@ -135,7 +135,6 @@ page {
     color: #666;
     font-weight: bold;
     padding-left: 40rpx;
-    width: 200rpx;
     display: inline-block;
     float: left;
 }

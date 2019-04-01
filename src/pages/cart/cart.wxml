@@ -17,18 +17,16 @@
                         </view>
                         <view class="cart-detail-wrap" hover-class="none" hover-stop-propagation="false">
                             <view class="cart-description-wrap" hover-class="none" hover-stop-propagation="false">
-                                <!-- <text class="cart-description" hover-class="none" hover-stop-propagation="false"> -->
                                 {{item.title}}
-                                <!-- </text> -->
                             </view>
                             <view class="cart-count-wrap" hover-class="none" hover-stop-propagation="false">
                                 <view class="cart-price" hover-class="none" hover-stop-propagation="false">
                                     ￥{{item.price}}
                                 </view>
                                 <view class="cart-count" hover-class="none" hover-stop-propagation="false">
-                                    <button>-</button>
+                                    <button bindtap="decline" data-index="{{index}}">-</button>
                                     <view>{{item.count}}</view>
-                                    <button>+</button>
+                                    <button bindtap="add" data-index="{{index}}">+</button>
                                 </view>
                             </view>
                         </view>
@@ -37,7 +35,7 @@
             </scroll-view>
         </view>
 
-        <view class="footer" catchtouchmove="doNothing">
+        <view class="footer">
             <view class="total-price-wrap" hover-class="none" hover-stop-propagation="false">
                 总价:￥<text class="total-price">{{totalPrice}}</text>
             </view>

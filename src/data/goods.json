@@ -1,49 +1,49 @@
  [{
      "src": "/images/top/top1.jpg",
      "title": "Nike Nike Air Mag到未来Air Mag",
-     "price": "79999",
+     "price": 79999,
      "place": "北京",
      "description": "还记得儿时我们都很喜欢走起路来又发光又有声音的鞋吗？而现在，耐克为我们带来了这样经典的回忆。并且，不只有回忆，更有逼格满满的黑科技。"
  }, {
      "src": "/images/top/top2.jpg",
      "title": "最美绝版南瓜色——阿玛尼405",
      "description": "一只演绎经典，脏橘色南瓜色完美切换。丝绒般质地，上嘴触感极致丝滑。显白神器，黄皮也能轻松驾驭。",
-     "price": "228",
+     "price": 228,
      "place": "广州"
  }, {
      "src": "/images/top/top3.jpg",
      "title": "【超级难买】NARS口红 #MONA色号",
      "description": "火出宇宙火出星际，难买程度一点不输阿玛尼和YSL之下，堪称年度口红界的巨头。NARS MONA，砖调暗红色，非常美啊啊啊，质地非常好~顺滑但是不油润，好丝滑的质地，轻轻一蹭就很上色~",
-     "price": "299",
+     "price": 299,
      "place": "深圳"
  }, {
-     "src": "/images/top/top2.jpg",
-     "title": "【超级难买】NARS口红 #MONA色号",
-     "description": "火出宇宙火出星际，难买程度一点不输阿玛尼和YSL之下，堪称年度口红界的巨头。NARS MONA，砖调暗红色，非常美啊啊啊，质地非常好~顺滑但是不油润，好丝滑的质地，轻轻一蹭就很上色~",
-     "price": "299",
-     "place": "深圳"
+     "src": "/images/top/top4.jpg",
+     "title": "正品太子浓缩洗衣粉家用桶装5.3斤手洗机洗天然皂粉增白包邮",
+     "description": "正品太子浓缩洗衣粉家用桶装5.3斤手洗机洗天然皂粉增白包邮",
+     "price": 29.9,
+     "place": "潮汕"
  }, {
-     "src": "/images/top/top2.jpg",
-     "title": "【超级难买】NARS口红 #MONA色号",
-     "description": "火出宇宙火出星际，难买程度一点不输阿玛尼和YSL之下，堪称年度口红界的巨头。NARS MONA，砖调暗红色，非常美啊啊啊，质地非常好~顺滑但是不油润，好丝滑的质地，轻轻一蹭就很上色~",
-     "price": "299",
-     "place": "深圳"
+     "src": "/images/top/top5.jpg",
+     "title": "MissCandy指甲油",
+     "description": "Miss Candy指甲油以葡糖酸钙，树脂为主要成分，让你体验真正健康的美甲，这款指甲油是3D效果的，在光下角度颜色不一样，银色中带着一点粉，宛如光下的贝壳、十分适合喜欢素净的妹纸，尽显淡雅的气质。",
+     "price": 65,
+     "place": "海外"
  }, {
-     "src": "/images/top/top2.jpg",
-     "title": "【超级难买】NARS口红 #MONA色号",
-     "description": "火出宇宙火出星际，难买程度一点不输阿玛尼和YSL之下，堪称年度口红界的巨头。NARS MONA，砖调暗红色，非常美啊啊啊，质地非常好~顺滑但是不油润，好丝滑的质地，轻轻一蹭就很上色~",
-     "price": "299",
-     "place": "深圳"
+     "src": "/images/top/top6.jpg",
+     "title": "限量军绿色PUMA IGNITE evoKNIT",
+     "description": "编织材质和“袜子鞋”风潮横扫球鞋界的年代里，PUMA也紧跟潮流打造了一双全新的PUMA IGNITE 3 EVOKNIT鞋款，运用独家打造的新设计“PROKNIT”全针织材质制作鞋身，并辅以帅气且硬汉风格十足的军绿色渲染，而外形轮廓毋庸置疑的是采用上了当下大热的袜筒式造型。袜头则标明有PUMA的英文字样彰显身份，最后搭载上带有剪头切割线条的轻量大底而成。",
+     "price": 399,
+     "place": "长沙"
  }, {
-     "src": "/images/top/top2.jpg",
-     "title": "【超级难买】NARS口红 #MONA色号",
-     "description": "火出宇宙火出星际，难买程度一点不输阿玛尼和YSL之下，堪称年度口红界的巨头。NARS MONA，砖调暗红色，非常美啊啊啊，质地非常好~顺滑但是不油润，好丝滑的质地，轻轻一蹭就很上色~",
-     "price": "299",
-     "place": "深圳"
+     "src": "/images/top/top7.jpg",
+     "title": "Gogan 冰种玉镯",
+     "description": "极品冰种质地，视觉效果通透莹润。",
+     "price": 450000,
+     "place": "广州"
  }, {
-     "src": "/images/top/top2.jpg",
-     "title": "【超级难买】NARS口红 #MONA色号",
-     "description": "火出宇宙火出星际，难买程度一点不输阿玛尼和YSL之下，堪称年度口红界的巨头。NARS MONA，砖调暗红色，非常美啊啊啊，质地非常好~顺滑但是不油润，好丝滑的质地，轻轻一蹭就很上色~",
-     "price": "299",
-     "place": "深圳"
+     "src": "/images/top/top8.jpg",
+     "title": "走红的解压神器-切割史莱姆",
+     "description": "将刀用火加热到上百摄氏度，一刀切到水宝宝上，清脆的声音会让你的疲劳一下子消失。小孩子慎玩。",
+     "price": 14.8,
+     "place": "东莞"
  }]

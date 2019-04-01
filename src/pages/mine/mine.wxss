@@ -1,0 +1,106 @@
+.mine-container {
+    padding: 0;
+    margin: 0;
+}
+
+.head-logo-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 400rpx;
+    width: 100%;
+    background: #fff;
+    margin-bottom: 40rpx;
+}
+
+.user-img {
+    overflow: hidden;
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 60rpx;
+}
+
+.user-nickname {
+    text-align: center;
+    color: #333;
+    font-size: 48rpx;
+    font-weight: bold;
+    height: 48rpx;
+    line-height: 48rpx;
+    margin-top: 10rpx;
+}
+
+.my-setting-wrapper {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #d7d7d7;
+}
+
+.my-address,
+.my-order {
+    width: 100%;
+    height: 100rpx;
+}
+
+.my-address {
+    border-top: 1px solid #d7d7d7;
+}
+
+.block-wrapper {
+    float: left;
+    width: 100%;
+    height: 100rpx;
+    overflow: hidden;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.block-icon {
+    width: 40rpx;
+    height: 40rpx;
+    margin: 0 20rpx;
+}
+
+.block-title {
+    width: 100%;
+}
+
+.right-arrow {
+    width: 20rpx;
+    height: 20rpx;
+    margin-right: 40rpx;
+    position: relative;
+}
+
+.right-arrow:before {
+    content: " ";
+    display: block;
+    height: 0;
+    width: 0;
+    border: 10rpx solid transparent;
+    border-left: 10rpx solid #333;
+    position: absolute;
+    border-radius: 1rpx;
+    left: 1px;
+    top: 0;
+}
+
+.right-arrow:after {
+    content: " ";
+    display: block;
+    height: 0;
+    width: 0;
+    border: 10rpx solid transparent;
+    border-left: 10rpx solid #fff;
+    position: absolute;
+    border-radius: 1rpx;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
